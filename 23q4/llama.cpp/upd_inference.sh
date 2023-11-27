@@ -1,3 +1,3 @@
-cd "$HOME"/Coding/llama.cpp/ || exit
+cd "$HOME"/Databases/Stacks/LLM/llama.cpp/ || exit
 git pull
 make clean && make
