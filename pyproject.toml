@@ -1,7 +1,7 @@
 [tool.poetry]
     name        = "langmax"
     version     = "0.1.0"
-    description = ""
+    description = "Leveraging the capabilities of LLMs to improve day-to-day tasks."
     authors     = ["Alex <30626291+ipruning@users.noreply.github.com>"]
     readme      = "README.md"
 
@@ -21,6 +21,8 @@
     transformers  = { extras = ["torch"], version = "^4.33.2" }
     einops        = "^0.6.1"
     sentencepiece = "^0.1.99"
+    datasets      = "^2.15.0"
+    rich          = "^13.7.0"
 
 [build-system]
     build-backend = "poetry.core.masonry.api"
