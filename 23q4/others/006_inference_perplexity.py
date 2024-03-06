@@ -1,6 +1,8 @@
 import os
 
-import openai
+from openai import OpenAI
+
+client = OpenAI()
 
 PERPLEXITY_API_KEY = os.environ.get("PERPLEXITY_API_KEY")
 
@@ -14,13 +16,16 @@ messages = [
     },
     {
         "role": "user",
-        "content": ("Count to 100, with a comma between each number and no newlines. " "E.g., 1, 2, 3, ..."),
+        "content": (
+            "Count to 100, with a comma between each number and no newlines. "
+            "E.g., 1, 2, 3, ..."
+        ),
     },
 ]
 
 # demo chat completion without streaming
 # models https://docs.perplexity.ai/docs/model-cards
-response = openai.ChatCompletion.create(
+response = client.chat.completions.create(
     model="mistral-7b-instruct",
     messages=messages,
     api_base="https://api.perplexity.ai",
