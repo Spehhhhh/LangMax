@@ -1,10 +1,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import openai
+from openai import OpenAI
 
-response = openai.Completion.create(
-    engine="gpt-3.5-turbo-instruct",
-    prompt="q: What is the capital of china?\na:",
+client = OpenAI()
+
+response = client.completions.create(
+    model="gpt-3.5-turbo",
+    prompt="q: What is the capital of china? Please give me the name of city only!\na:",
     logprobs=5,
     stop="\n",
     temperature=0,
