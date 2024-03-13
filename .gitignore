@@ -134,5 +134,5 @@ dmypy.json
 # Orhers
 TODO/
 llms/
-24q1/chatgpt-api-by-browser-script/
+scripts/24q1/chatgpt-api-by-browser-script/
 private.env
