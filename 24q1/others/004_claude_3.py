@@ -1,8 +1,15 @@
+import os
+from pathlib import Path
+
 import anthropic
-from pool_private import anthropic_edu_pool_002
+from dotenv import load_dotenv
+
+load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent.parent / "private.env")
+
+api_key_anthropic = os.getenv("api_key_anthropic_edu_pool_002")
 
 client = anthropic.Anthropic(
-    api_key=anthropic_edu_pool_002,
+    api_key=api_key_anthropic,
 )
 
 message = client.messages.create(
@@ -14,11 +21,3 @@ message = client.messages.create(
 )
 
 print(message.content)
-
-import anthropic
-
-anthropic.Anthropic().messages.create(
-    model="claude-2.1",
-    max_tokens=1024,
-    messages=[{"role": "user", "content": "Hello, world"}],
-)
