@@ -131,6 +131,8 @@ dmypy.json
 # PyCharm
 .idea/
 
-# LLMs
-llms/
+# Orhers
 TODO/
+llms/
+24q1/chatgpt-api-by-browser-script/
+private.py
