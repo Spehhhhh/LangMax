@@ -30,6 +30,7 @@
     llama-index   = "^0.10.19"
     langchain     = "^0.1.12"
     ragas         = "^0.1.4"
+    python-dotenv = "^1.0.1"
 
 [build-system]
     build-backend = "poetry.core.masonry.api"
