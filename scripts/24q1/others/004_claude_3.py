@@ -4,8 +4,7 @@ from pathlib import Path
 import anthropic
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent.parent / "private.env")
-
+load_dotenv(dotenv_path=Path(__file__).resolve().parents[3] / "private.env")
 api_key_anthropic = os.getenv("api_key_anthropic_edu_pool_002")
 
 client = anthropic.Anthropic(
@@ -20,4 +19,4 @@ message = client.messages.create(
     messages=[{"role": "user", "content": "How are you today?"}],
 )
 
-print(message.content)
+print(message.content[0].text)

@@ -1,5 +1,5 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 # Set up and plot the dataset
 yy = np.array([1.1, 2.3, 2.9])  # N,
