@@ -6,31 +6,35 @@
     readme      = "README.md"
 
 [tool.poetry.dependencies]
-    python        = ">=3.10.0, <3.12.0"
-    anthropic     = "^0.19.2"
-    black         = { extras = ["jupyter"], version = "^24.2.0" }
-    datasets      = "^2.18.0"
-    einops        = "^0.7.0"
-    gradio        = "^4.21.0"
-    httpx         = { extras = ["socks"], version = "^0.27.0" }
-    lmql          = "^0.7.3"
-    matplotlib    = "^3.8.3"
-    mlx           = "^0.6.0"
-    numpy         = "^1.26.3"
-    openai        = "^1.13.3"
-    pandas        = "^2.2.1"
-    rich          = "^13.7.1"
-    sentencepiece = "^0.2.0"
-    tenacity      = "^8.2.3"
-    tiktoken      = "^0.6.0"
-    tqdm          = "^4.66.2"
-    transformers  = { extras = ["torch"], version = "^4.38.2" }
-    chainlit      = "^1.0.400"
-    lark-oapi     = "^1.2.3"
-    llama-index   = "^0.10.19"
-    langchain     = "^0.1.12"
-    ragas         = "^0.1.4"
-    python-dotenv = "^1.0.1"
+    anthropic        = "^0.21.3"
+    black            = { extras = ["jupyter"], version = "^23.7.0" }
+    chainlit         = "^1.0.400"
+    datasets         = "^2.18.0"
+    einops           = "^0.7.0"
+    flask            = "^3.0.2"
+    gradio           = "^4.21.0"
+    httpx            = { extras = ["socks"], version = "^0.27.0" }
+    langchain        = "^0.1.12"
+    lark-oapi        = "^1.2.3"
+    llama-cpp-python = { extras = ["server"], version = "^0.2.57" }
+    llama-index      = "^0.10.19"
+    lmql             = "^0.7.3"
+    matplotlib       = "^3.8.3"
+    mlx              = "^0.9.0"
+    numpy            = "^1.26.3"
+    openai           = "^1.14.3"
+    pandas           = "^2.2.1"
+    parea-ai         = "^0.2.98"
+    portkey-ai       = "^1.1.7"
+    python           = ">=3.10.0, <3.12.0"
+    python-dotenv    = "^1.0.1"
+    ragas            = "^0.1.4"
+    rich             = "^13.7.1"
+    sentencepiece    = "^0.2.0"
+    tenacity         = "^8.2.3"
+    tiktoken         = "^0.6.0"
+    tqdm             = "^4.66.2"
+    transformers     = { extras = ["torch"], version = "^4.39.2" }
 
 [build-system]
     build-backend = "poetry.core.masonry.api"
