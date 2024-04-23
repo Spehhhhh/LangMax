@@ -135,4 +135,5 @@ dmypy.json
 TODO/
 llms/
 scripts/24q1/chatgpt-api-by-browser-script/
+wandb/
 private.env
