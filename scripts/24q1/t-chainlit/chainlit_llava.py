@@ -1,14 +1,14 @@
 import dataclasses
+from enum import Enum, auto
 import io
 import json
 import os
-from enum import Enum, auto
 from typing import List
 
+from PIL import Image
 import aiohttp
 import chainlit as cl
 from chainlit.input_widget import Select, Slider
-from PIL import Image
 
 CONTROLLER_URL = os.environ.get("LLAVA_CONTROLLER_URL")
 
