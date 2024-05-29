@@ -1,8 +1,8 @@
-import os
 from math import exp
+import os
 
-import numpy as np
 from IPython.display import HTML, display
+import numpy as np
 from openai import OpenAI
 
 client = OpenAI(

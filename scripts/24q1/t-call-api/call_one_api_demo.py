@@ -1,18 +1,14 @@
-from openai import OpenAI
+import openai
 
-YOUR_KEY = "sk-36j6vhTdeeLFzDkiE9D728A11a9e4c7aBc67Ac3701D13f51"
-YOUR_BASE_URL = "https://one-api.qkvlab.com/v1"
-YOUR_MODEL = "claude-3-opus-20240229"
+openai.api_key = ""
+openai.api_base = ""
 
-client = OpenAI(api_key=YOUR_KEY)
-client.base_url = YOUR_BASE_URL
-
-completion = client.chat.completions.create(
-    model=YOUR_MODEL,
+response = openai.ChatCompletion.create(
+    model="gpt-4-0125-preview",
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "Hello!"},
+        {"role": "user", "content": "1_1?"},
     ],
 )
 
-print(completion.choices[0].message)
+print(response["choices"][0]["message"]["content"])
