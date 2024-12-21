@@ -13,6 +13,7 @@ async_client = AsyncAnthropicBedrock(
     aws_secret_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
 )
 
+
 def sync_completion():
     message = sync_client.messages.create(
         max_tokens=1024,
@@ -32,13 +33,14 @@ async def async_completion():
         max_tokens=1024,
         messages=[
             {
-            "role": "user",
-            "content": "Hello!",
-        }
-    ],
+                "role": "user",
+                "content": "Hello!",
+            }
+        ],
         model="us.anthropic.claude-3-5-sonnet-20241022-v2:0",
     )
     return message
+
 
 if __name__ == "__main__":
     print(sync_completion())
