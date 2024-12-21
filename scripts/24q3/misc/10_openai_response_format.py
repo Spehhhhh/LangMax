@@ -78,7 +78,7 @@ class DataExtractor:
         return completion.choices[0].message.parsed
 
 
-test_prompt = """这周六上午10点，我要在会议室1举行项目启动会议，讨论项目需求和目标，接着下午2点30分，在会议室2我有一个代码审查会议。然后在下周五上午11点要去上海参加一个技术论坛。
+test_prompt = """这周六上午 10 点，我要在会议室 1 举行项目启动会议，讨论项目需求和目标，接着下午 2 点 30 分，在会议室 2 我有一个代码审查会议。然后在下周五上午 11 点要去上海参加一个技术论坛。
 """
 
 date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

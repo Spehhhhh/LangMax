@@ -33,7 +33,7 @@ Answer in JSON using this schema:
 """
 
 response = client.chat.completions.create(
-    model="llama3.1-70b",
+    model="llama3.3-70b",
     messages=[
         {
             "role": "user",
