@@ -16,8 +16,9 @@
         "einops>=0.8.0",
         "google-genai>=0.3.0",
         "grpcio>=1.68.1",
-        "jinja2>=3.1.4",
+        "jinja2>=3.1.5",
         "joblib>=1.4.2",
+        "lancedb>=0.17.0",
         "logfire>=2.9.0",
         "marimo>=0.10.6",
         "mcp>=1.1.2",
@@ -31,7 +32,7 @@
         "timm>=1.0.12",
         "tokencost>=0.1.17",
         "torchvision>=0.20.1",
-]
+    ]
 
 [tool.pyright]
     venv             = ".venv"
