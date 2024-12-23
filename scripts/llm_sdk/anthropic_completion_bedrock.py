@@ -2,7 +2,6 @@ import asyncio
 import os
 
 from anthropic import AnthropicBedrock, AsyncAnthropicBedrock
-from rich import print
 
 sync_client = AnthropicBedrock(
     aws_access_key=os.getenv("AWS_ACCESS_KEY"),

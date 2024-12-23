@@ -3,7 +3,6 @@ from typing import List, Union
 
 import openai
 from pydantic import BaseModel
-from rich import print
 
 
 class Query(BaseModel):

@@ -1,5 +1,4 @@
 from mlx_lm.utils import generate, load
-from rich import print
 
 messages = [
     {

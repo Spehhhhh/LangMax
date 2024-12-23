@@ -1,5 +1,3 @@
-# https://docs.turso.tech/features/embedded-replicas/introduction#embedded-replicas
-
 import os
 
 import libsql_experimental as libsql

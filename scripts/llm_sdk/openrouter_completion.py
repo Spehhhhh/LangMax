@@ -1,7 +1,6 @@
 import os
 
 from openai import OpenAI
-from rich import print
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 YOUR_SITE_URL = "https://www.qkvlab.com"

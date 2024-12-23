@@ -4,7 +4,6 @@ from enum import Enum
 
 import openai
 from pydantic import BaseModel
-from rich import print
 
 client = openai.OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY"),
