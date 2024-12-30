@@ -839,6 +839,7 @@ dependencies = [
     { name = "timm" },
     { name = "tokencost" },
     { name = "torchvision" },
+    { name = "transformers", extra = ["sentencepiece"] },
 ]
 
 [package.metadata]
@@ -855,19 +856,20 @@ requires-dist = [
     { name = "joblib", specifier = ">=1.4.2" },
     { name = "lancedb", specifier = ">=0.17.0" },
     { name = "logfire", specifier = ">=2.11.0" },
-    { name = "marimo", specifier = ">=0.10.6" },
+    { name = "marimo", specifier = ">=0.10.8" },
     { name = "mcp", specifier = ">=1.1.2" },
     { name = "mflux", specifier = ">=0.5.1" },
     { name = "openai", specifier = ">=1.58.1" },
-    { name = "pandera", specifier = ">=0.22.0" },
-    { name = "patito", specifier = ">=0.8.2" },
-    { name = "polars", extras = ["numpy", "openpyxl", "pandas", "pydantic", "pyarrow", "sqlalchemy"], specifier = ">=1.17.1" },
+    { name = "pandera", specifier = ">=0.22.1" },
+    { name = "patito", specifier = ">=0.8.3" },
+    { name = "polars", extras = ["numpy", "openpyxl", "pandas", "pydantic", "pyarrow", "sqlalchemy"], specifier = ">=1.18.0" },
     { name = "psycopg2", specifier = ">=2.9.10" },
     { name = "rich", specifier = ">=13.9.4" },
     { name = "ruff", specifier = "~=0.8.4" },
     { name = "timm", specifier = ">=1.0.12" },
     { name = "tokencost", specifier = ">=0.1.17" },
     { name = "torchvision", specifier = ">=0.20.1" },
+    { name = "transformers", extras = ["sentencepiece"], specifier = ">=4.47.1" },
 ]
 
 [[package]]
@@ -916,7 +918,7 @@ wheels = [
 
 [[package]]
 name = "marimo"
-version = "0.10.6"
+version = "0.10.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
@@ -936,9 +938,9 @@ dependencies = [
     { name = "uvicorn" },
     { name = "websockets" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/94/00/3200154fce11576ffb8ce3d51bcd1aae0b1eeeb006f18c631fdc9af3afee/marimo-0.10.6.tar.gz", hash = "sha256:b3bdc78cf07801d1197b0d3957e845526f82db30f48e2dc91324923579204d66", size = 11798823 }
+sdist = { url = "https://files.pythonhosted.org/packages/b6/bb/ce597cd83a0d66321ffe22d5ed47cc11e76b1bcff563e37ef408ba064d27/marimo-0.10.8.tar.gz", hash = "sha256:23c71d7d9f4eb02cefad331214e261f289da5f2e36dc681facc56a1a22695f98", size = 11809944 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0e/e6/4f2a934759232525f53180d84b2c3633dd7df88ccdbdefa118c58c741ffe/marimo-0.10.6-py3-none-any.whl", hash = "sha256:278c8cbf37b323ad913b20af5abc17da089d88d4d6bdb484d78fcc2bab21448e", size = 12091766 },
+    { url = "https://files.pythonhosted.org/packages/f4/76/51aa30ccc00e2133381fa2fd4725948186ec72ab92d6b7361ceb71884180/marimo-0.10.8-py3-none-any.whl", hash = "sha256:2fc81d5b6163838c6ef5ef73ed97793af26197a73602711d3eae80509131fb29", size = 12103765 },
 ]
 
 [[package]]
@@ -1465,7 +1467,7 @@ wheels = [
 
 [[package]]
 name = "pandera"
-version = "0.22.0"
+version = "0.22.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "numpy" },
@@ -1475,9 +1477,9 @@ dependencies = [
     { name = "typeguard" },
     { name = "typing-inspect" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/56/bd/940af663acc19503d76aa6f7975007ab10dd45c8656752029461d1442a64/pandera-0.22.0.tar.gz", hash = "sha256:27d0e96ee0d7b3dee3502a483e054de4301d432bb230a6bfa6c5e01aca8d208a", size = 203115 }
+sdist = { url = "https://files.pythonhosted.org/packages/13/f2/923e5a06f0f70e28de41eca58c89e4f87b00aa7c17a3436cc09592756c43/pandera-0.22.1.tar.gz", hash = "sha256:091ebc353383ba642e5a20ee0df763ed2059ab99cb4b2ac3e83f482de8493645", size = 203085 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c7/fc/438b1fd8ce471b08cebbc52e7aa8366a6eefd8e022116914919fcc7996ac/pandera-0.22.0-py3-none-any.whl", hash = "sha256:36fe712378a2a0b4b7ec0e18fc5433b1e188de7eb9aee09dbc08694121b256f9", size = 261414 },
+    { url = "https://files.pythonhosted.org/packages/c7/b8/ab3e1419c0f3472c23ec7323da4bc970c3620055c9475d6fe3aa1dcdcef7/pandera-0.22.1-py3-none-any.whl", hash = "sha256:2a35531b4b533ac83e606a6dcc3cd41561774ff3d872117228e931f22e72f330", size = 261370 },
 ]
 
 [[package]]
@@ -1491,16 +1493,16 @@ wheels = [
 
 [[package]]
 name = "patito"
-version = "0.8.2"
+version = "0.8.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "polars" },
     { name = "pydantic" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/8d/5b/8ac000fef872c5102df20c96207aff58f5d2ddc8e49aec47ed000977368c/patito-0.8.2.tar.gz", hash = "sha256:337c8d27fbd7cc28e694b4470b33929e0de2fc47b4cb2c1d13a49dd02b186014", size = 42659 }
+sdist = { url = "https://files.pythonhosted.org/packages/4f/77/376b341a49cf5fb2db16daae561f248fb504d65453f137eeda2a1cbbb443/patito-0.8.3.tar.gz", hash = "sha256:aba7ac6bb640a075e1c22862dd577519a615724db0694ac3ae81a6a3f3993fb1", size = 42640 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/55/d6/9a361cdc1fe63d11222d6f0f2a466e05818f78d848df4b7d51af214e8dc3/patito-0.8.2-py3-none-any.whl", hash = "sha256:a26eb9b562a4fbb3f99dab94e098af49350b667bfb9fb43a6376872d592a6882", size = 43326 },
+    { url = "https://files.pythonhosted.org/packages/72/f1/4a71d8a974d8f5625045b5351e91e4f93b9a3c14aacbd2777de63c53a851/patito-0.8.3-py3-none-any.whl", hash = "sha256:cc4dd90ec8a867806548a5161af4cf195f3d223fcae24d879285cc003ab89ed4", size = 43331 },
 ]
 
 [[package]]
@@ -1533,15 +1535,16 @@ wheels = [
 
 [[package]]
 name = "polars"
-version = "1.17.1"
+version = "1.18.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/32/3b/40b42c6b0e54b001fbaaa55d3d769283e0d54541be783783e08da6a9c54a/polars-1.17.1.tar.gz", hash = "sha256:5a3dac3cb7cbe174d1fa898cba9afbede0c08e8728feeeab515554d762127019", size = 4220337 }
+sdist = { url = "https://files.pythonhosted.org/packages/9b/57/821f6b625e63516bf5f0ba428618dd013c43fd79b20e722c454a978cbefe/polars-1.18.0.tar.gz", hash = "sha256:5c2f119555ae8d822a5322509c6abd91601a8931115d2e4c3fff13fadf39e877", size = 4257494 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5b/24/a7d97fb8988a3ccf9e285311fe9b04e8cec95657fc2b9f9a8ebedbcdd06f/polars-1.17.1-cp39-abi3-macosx_10_12_x86_64.whl", hash = "sha256:d3a2172f7cf332010f0b034345111e9c86d59b5a5b0fc5aa0509121f40d9e43c", size = 32993574 },
-    { url = "https://files.pythonhosted.org/packages/84/4f/b892993474850e85ac05ffa6d0f312c207dcbb1e4a55dc6383f826d5a87d/polars-1.17.1-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:82e98c69197df0d8ddc341a6175008508ceaea88f723f32044027810bcdb43fa", size = 28773084 },
-    { url = "https://files.pythonhosted.org/packages/29/08/54fe197c9d5f951cf85944ff9cfe0a706dc9d2230e98814a125eda8a1d09/polars-1.17.1-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:59abdab015ed2ecfa0c63862b960816c35096e1f4df057dde3c44cd973af5029", size = 36360758 },
-    { url = "https://files.pythonhosted.org/packages/9b/0c/f5a100da6184f11838520a423a5830dabe194a0812c9fdbef419f2276a92/polars-1.17.1-cp39-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:6d2f922c403b8900b3ae3c23a27b2cae3a2db40ad790cc4fc368402b92629b11", size = 32685903 },
-    { url = "https://files.pythonhosted.org/packages/4b/59/cf2e88bebdffb7efb7e4f65f4ec9e293040c313d37e3628db87e4f64dca4/polars-1.17.1-cp39-abi3-win_amd64.whl", hash = "sha256:d38156c8259554cbcb17874d91e6dfa9c404335f08a3307496aadfdee46baa31", size = 35931768 },
+    { url = "https://files.pythonhosted.org/packages/4e/df/289578844b299f97125178ad6db60dc1b494ec8d813d397118f2493c392a/polars-1.18.0-cp39-abi3-macosx_10_12_x86_64.whl", hash = "sha256:27a6c7e5d2d15afb5f06291433019411c9a28e59e49741442d11a6a945f21daa", size = 29067782 },
+    { url = "https://files.pythonhosted.org/packages/7b/79/cdc5d888a5f858f5c572d3a3a8fa65724d4426aa9edbfd6461d3dc85bc47/polars-1.18.0-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:6431563aee2dfa6787b0debbed3f565ebb4322da32317d95c8eac3e48330bc28", size = 25807696 },
+    { url = "https://files.pythonhosted.org/packages/f4/cd/cd49096ead3dd208495945021d3042dad01d0dd63702b6f4f4f7e3a3983b/polars-1.18.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a333ff578373e29e0cacc79c35afe42c0620813c9b0c832009ab8b330e421093", size = 32287987 },
+    { url = "https://files.pythonhosted.org/packages/66/28/7eb57b1f37f7c0206baf1877d0dcd082518ef3de34fe8621190b6da4801b/polars-1.18.0-cp39-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:3a3a65a3ad6b6b0bd61a33f215856cfdd3e3abc9942e69526b2b88c0ef8683a4", size = 29314336 },
+    { url = "https://files.pythonhosted.org/packages/09/9e/184f777b41bba086463771edf7dbd3ba13c071222117ab5c19c99e76bc66/polars-1.18.0-cp39-abi3-win_amd64.whl", hash = "sha256:a79ef2542454d9cace63e8fa528cf808b6377077173be522df9b8c0e792ce96a", size = 32356143 },
+    { url = "https://files.pythonhosted.org/packages/2c/dc/5b3345688bb14cda0ea23f42c96553aa75c4b8a6992f38cac0df6a44ec31/polars-1.18.0-cp39-abi3-win_arm64.whl", hash = "sha256:52b543da52f4f6a661a2fa3cdd4b499938bdb34eeae538ec3bcef6c8c41bfc33", size = 28631561 },
 ]
 
 [package.optional-dependencies]
@@ -2289,6 +2292,12 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/15/1a/936aeb4f88112f670b604f5748034568dbc2b9bbb457a8d4518b1a15510a/transformers-4.47.1.tar.gz", hash = "sha256:6c29c05a5f595e278481166539202bf8641281536df1c42357ee58a45d0a564a", size = 8707421 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/f2/3a/8bdab26e09c5a242182b7ba9152e216d5ab4ae2d78c4298eb4872549cd35/transformers-4.47.1-py3-none-any.whl", hash = "sha256:d2f5d19bb6283cd66c893ec7e6d931d6370bbf1cc93633326ff1f41a40046c9c", size = 10133598 },
+]
+
+[package.optional-dependencies]
+sentencepiece = [
+    { name = "protobuf" },
+    { name = "sentencepiece" },
 ]
 
 [[package]]
