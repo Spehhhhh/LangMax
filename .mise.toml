@@ -1,5 +1,2 @@
 [settings]
-  env_file = ".env"
-
-[env]
-  _.python.venv = ".venv"
+env_file = ".env"
