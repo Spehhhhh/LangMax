@@ -8,7 +8,7 @@ memory = Memory(cachedir, verbose=0)
 
 @memory.cache
 def my_function(x, y):
-    time.sleep(1)
+    time.sleep(5)
     return x + y
 
 
